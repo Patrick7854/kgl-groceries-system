@@ -22,12 +22,20 @@ app.use(express.urlencoded({ extended: true }));
 // ========================================
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
+const produceRoutes = require('./routes/produceRoutes');
+const saleRoutes = require('./routes/saleRoutes');
+const creditSaleRoutes = require('./routes/creditSaleRoutes');
+const reportRoutes = require('./routes/reportRoutes');
 
 // ========================================
 // Use Routes
 // ========================================
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/produce', produceRoutes);
+app.use('/api/sales', saleRoutes);
+app.use('/api/creditsales', creditSaleRoutes);
+app.use('/api/reports', reportRoutes);
 
 // ========================================
 // Test route
