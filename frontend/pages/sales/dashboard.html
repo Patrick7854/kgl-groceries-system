@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGL - Sales Dashboard</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/frontend/css/sales.css">
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>KARIBU GROCERIES</h2>
+            <p>Sales Agent</p>
+            <div class="branch-name" id="branchName">MAGANJO Branch</div>
+        </div>
+
+        <div class="sidebar-menu">
+            <a href="/frontend/pages/sales/dashboard.html" class="menu-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="/frontend/pages/sales/newsale.html" class="menu-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>New Sale</span>
+            </a>
+            <a href="/frontend/pages/sales/creditsale.html" class="menu-item">
+                <i class="fas fa-credit-card"></i>
+                <span>Credit Sale</span>
+            </a>
+            <a href="/frontend/pages/sales/history.html" class="menu-item">
+                <i class="fas fa-history"></i>
+                <span>My Sales</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- Top Bar -->
+        <div class="topbar">
+            <div class="page-title">
+                <h1>Sales Dashboard</h1>
+                <p><i class="fas fa-store"></i> Selling from: <span id="branchDisplay">MAGANJO Branch</span></p>
+            </div>
+            <div class="user-info">
+                <div class="user-badge">
+                    <i class="fas fa-user-tag"></i>
+                    <span id="userName">Loading...</span>
+                </div>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Today's Sales</h3>
+                    <p id="todaySales">0</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Credit Sales</h3>
+                    <p id="creditSales">0</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-boxes"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Available Stock</h3>
+                    <p id="availableStock">0 kg</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <h2 style="margin-bottom: 15px; color: var(--navy-dark);">Quick Actions</h2>
+        <div class="actions-grid">
+            <a href="/frontend/pages/sales/newsale.html" class="action-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>New Sale</h3>
+                <p>Record a cash sale</p>
+            </a>
+            
+            <a href="/frontend/pages/sales/creditsale.html" class="action-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Credit Sale</h3>
+                <p>Sell on credit to trusted buyers</p>
+            </a>
+        </div>
+
+        <!-- Recent Sales -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> My Recent Sales</h2>
+                <a href="/frontend/pages/sales/history.html" class="btn btn-primary">View All</a>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date/Time</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                            <th>Buyer</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentSalesBody">
+                        <tr>
+                            <td colspan="6" style="text-align: center;">No sales yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Available Stock -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2><i class="fas fa-boxes"></i> Available Stock</h2>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Available (kg)</th>
+                            <th>Price (UGX/kg)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stockBody">
+                        <tr>
+                            <td colspan="4" style="text-align: center;">Loading stock...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/frontend/js/api-config.js"></script>
+    <script src="/frontend/js/utilities.js"></script>
+    <script src="/frontend/js/sales.js"></script>
+</body>
+</html>

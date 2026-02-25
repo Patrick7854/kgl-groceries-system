@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARIBU GROCERIES - Branches Overview</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/frontend/css/director.css">
+</head>
+<body>
+    <!-- SIDEBAR - NEW DESIGN -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="logo-text">
+                    <h2>KARIBU</h2>
+                    <p>GROCERIES LTD</p>
+                </div>
+            </div>
+            
+            <div class="user-badge">
+                <div class="user-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="user-info">
+                    <h4 id="sidebarUserName">Mr. Orban</h4>
+                    <p>Director</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Main</div>
+                <a href="/frontend/pages/director/dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/frontend/pages/director/users.html" class="nav-item">
+                    <i class="fas fa-users-cog"></i>
+                    <span>Manage Users</span>
+                </a>
+                <a href="/frontend/pages/director/reports.html" class="nav-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Sales Reports</span>
+                </a>
+            </div>
+            
+            <div class="nav-section">
+                <div class="nav-section-title">Branches</div>
+                <a href="/frontend/pages/director/branches.html" class="nav-item active">
+                    <i class="fas fa-store"></i>
+                    <span>MAGANJO Branch</span>
+                </a>
+                <a href="/frontend/pages/director/branches.html" class="nav-item">
+                    <i class="fas fa-store"></i>
+                    <span>MATUGGA Branch</span>
+                </a>
+            </div>
+            
+            <div class="nav-section">
+                <div class="nav-section-title">Inventory</div>
+                <a href="/frontend/pages/director/stock-overview.html" class="nav-item">
+                    <i class="fas fa-boxes"></i>
+                    <span>Stock Overview</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Low Stock Alerts</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="branch-indicator">
+            <h4><i class="fas fa-map-marker-alt"></i> BRANCHES</h4>
+            <div class="branch-chip">
+                <i class="fas fa-check-circle"></i>
+                <span>MAGANJO Branch</span>
+            </div>
+            <div class="branch-chip">
+                <i class="fas fa-check-circle"></i>
+                <span>MATUGGA Branch</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- Top Bar -->
+        <div class="topbar">
+            <div class="page-title">
+                <h1>Branches Overview</h1>
+                <p><i class="fas fa-store"></i> Managing MAGANJO and MATUGGA branches</p>
+            </div>
+            <div class="user-info">
+                <div class="user-badge">
+                    <i class="fas fa-user-tie"></i>
+                    <span id="userName">Mr. Orban</span>
+                </div>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- MAGANJO Branch Details -->
+        <div class="branch-section">
+            <div class="branch-header">
+                <h2><i class="fas fa-map-pin"></i> MAGANJO Branch</h2>
+                <span class="branch-badge">Manager: John Manager</span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px;">
+                <div>
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px;">Branch Details</h3>
+                    <p><i class="fas fa-user" style="color: var(--primary-teal); width: 20px;"></i> <strong>Manager:</strong> John Manager</p>
+                    <p><i class="fas fa-phone" style="color: var(--primary-teal); width: 20px;"></i> <strong>Contact:</strong> +256 700 123457</p>
+                    <p><i class="fas fa-envelope" style="color: var(--primary-teal); width: 20px;"></i> <strong>Email:</strong> manager.maganjo@karibugroceries.com</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--primary-teal); width: 20px;"></i> <strong>Location:</strong> Maganjo, Uganda</p>
+                    <p><i class="fas fa-calendar" style="color: var(--primary-teal); width: 20px;"></i> <strong>Established:</strong> 2020</p>
+                </div>
+                
+                <div>
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px;">Sales Agents</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Contact</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Peter Agent</td>
+                                    <td>+256 700 123459</td>
+                                    <td>agent.maganjo@karibugroceries.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Paul Agent</td>
+                                    <td>+256 700 123460</td>
+                                    <td>agent2.maganjo@karibugroceries.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MATUGGA Branch Details -->
+        <div class="branch-section">
+            <div class="branch-header">
+                <h2><i class="fas fa-map-pin"></i> MATUGGA Branch</h2>
+                <span class="branch-badge">Manager: Sarah Manager</span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px;">
+                <div>
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px;">Branch Details</h3>
+                    <p><i class="fas fa-user" style="color: var(--primary-teal); width: 20px;"></i> <strong>Manager:</strong> Sarah Manager</p>
+                    <p><i class="fas fa-phone" style="color: var(--primary-teal); width: 20px;"></i> <strong>Contact:</strong> +256 700 123458</p>
+                    <p><i class="fas fa-envelope" style="color: var(--primary-teal); width: 20px;"></i> <strong>Email:</strong> manager.matugga@karibugroceries.com</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--primary-teal); width: 20px;"></i> <strong>Location:</strong> Matugga, Uganda</p>
+                    <p><i class="fas fa-calendar" style="color: var(--primary-teal); width: 20px;"></i> <strong>Established:</strong> 2021</p>
+                </div>
+                
+                <div>
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px;">Sales Agents</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Contact</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Grace Agent</td>
+                                    <td>+256 700 123461</td>
+                                    <td>agent.matugga@karibugroceries.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Anna Agent</td>
+                                    <td>+256 700 123462</td>
+                                    <td>agent2.matugga@karibugroceries.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/frontend/js/api-config.js"></script>
+    <script src="/frontend/js/utilities.js"></script>
+    <script src="/frontend/js/director.js"></script>
+</body>
+</html>
